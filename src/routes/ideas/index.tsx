@@ -31,11 +31,11 @@ console.log(ideas);
       Ideas
     </h1>
     
-    <ul className="grid grid-cols-1 sm:grid-cols-2
+    <div className="grid grid-cols-1 sm:grid-cols-2
     gap-6">{ ideas?.map((idea) => (
      <IdeaCard key={idea.id} idea={idea} />
     )) 
     }
-    </ul>   
+    </div>   
   </div>
 }
