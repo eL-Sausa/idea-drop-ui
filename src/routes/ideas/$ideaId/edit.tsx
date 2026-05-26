@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate, Link } from '@tanstack/react-router'
 import { useState} from 'react'
 import { useMutation, useSuspenseQuery, queryOptions} from '@tanstack/react-query'
-import { fetchIdea, deleteIdea, updateIdea } from '@/api/ideas'
+import { fetchIdea, updateIdea } from '@/api/ideas'
 
 const ideaQueryOptions = (id: string) => queryOptions({
     queryKey: ['idea', id],
@@ -131,7 +131,7 @@ const { mutateAsync, isPending } = useMutation({
             disabled={isPending}
             className="block w-full bg-blue-600 text-white rounded-md hover:bg-blue-700 font-semi-bold py-2 px-6transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            { isPending ? 'Updaing...' : 'Update Idea' }
+            { isPending ? 'Updating...' : 'Update Idea' }
           </button>
         </div> 
       </form>
