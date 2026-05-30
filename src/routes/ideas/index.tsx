@@ -32,8 +32,9 @@ const { data: ideas } = useSuspenseQuery(ideasQueryOptions);
     </h1>
     
     <div className="grid grid-cols-1 sm:grid-cols-2
-    gap-6">{ ideas.map((idea) => (
-     <IdeaCard key={idea._id} idea={idea} />
+    gap-6">
+      { ideas.map((idea) => (
+        <IdeaCard key={idea._id} idea={idea} />
     )) 
     }
     </div>   
